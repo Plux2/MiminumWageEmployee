@@ -2,15 +2,12 @@ import discord
 import random
 from discord.ext import commands
 from alexlist import list1
-from os import environ
-from dotenv import load_dotenv
+from private.config import TOKEN
 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix='.', intents=intents)
-load_dotenv()
-TOKEN = environ["TOKEN"]
 
 
 @bot.event
