@@ -2,12 +2,15 @@ import discord
 import random
 from discord.ext import commands
 from alexlist import list1
-from jesterlist import list2
+from os import environ
+from dotenv import load_dotenv
 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix='.', intents=intents)
+load_dotenv()
+TOKEN = environ["TOKEN"]
 
 
 @bot.event
@@ -69,11 +72,5 @@ async def on_command_error(ctx, error):
         await ctx.send("you cant use that command dumbass lmfao")
 
 
-@bot.command()
-async def garychat(ctx):
-    print('.garychat executed successfully')
-    await ctx.send('gary chat https://discord.gg/FX5nNDnF')
 
-
-
-bot.run('MTAzNjA4NzY0NjA4NDE0NTIxMg.GiPorX.mGYDPdii67Xnh3zRIFSfk9rWYsWafHVXAExsPc')
+bot.run(TOKEN)
