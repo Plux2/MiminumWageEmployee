@@ -1,0 +1,20 @@
+list1 = [
+    'https://tenor.com/view/omg-schock-cat-gif-20299170',
+    'https://tenor.com/view/but-heres-the-kicker-gif-26137308',
+    'https://tenor.com/view/cat-love-huge-hug-big-gif-11990658',
+    'https://tenor.com/view/twerking-twerk-twerking-cat-twerk-cat-cat-gif-22552873',
+    'https://cdn.discordapp.com/attachments/457563144852865041/1028166988394156042/F6550C81-6281-4AC4-A8B6-ABCFC00D0CB9.gif',
+    'https://media.discordapp.net/attachments/958886563713007740/1021906098627821649/20220BF4-74B1-43AC-B019-390B833EE3F3.gif',
+    'https://tenor.com/view/cat-gif-25013028',
+    'https://media.discordapp.net/attachments/959335699339956244/1014367269029158912/togif.gif',
+    'https://media.discordapp.net/attachments/754607880359116824/1009268601221562488/ezgif.com-gif-maker-2.gif',
+    'https://media.discordapp.net/attachments/555004114057166859/987879403860148264/caption.gif',
+    'https://media.discordapp.net/attachments/958886563713007740/1007749584539373588/108322-resize.gif',
+    'https://cdn.discordapp.com/attachments/555004114057166859/1036018031186432112/gaming_cat.gif',
+    'https://cdn.discordapp.com/attachments/555004114057166859/1035518350954074152/20221027_210002.jpg',
+    'https://tenor.com/view/cat-kitten-kitty-yeet-funny-gif-21938191',
+    'https://tenor.com/view/swag-cat-mad-watch-this-swag-crash-lol-gif-20326813',
+    'https://tenor.com/view/cat-funny-weird-stare-big-eyes-gif-26186132',
+    'https://tenor.com/view/cat-call-funny-face-eyes-nose-gif-16784312',
+    'https://tenor.com/view/guh-cat-gif-22906544'
+]
