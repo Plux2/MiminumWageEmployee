@@ -11,6 +11,7 @@ bot = commands.Bot(command_prefix='.', intents=intents)
 # Ready Event
 @bot.event
 async def on_ready():
+    await bot.change_presence(activity=discord.Game(name="hitting the whip and nae nae"))
     print("|---------------------------------------|")
     print(f' Bot Online | {bot.user} ')
     print("|---------------------------------------|")
@@ -44,7 +45,7 @@ async def on_member_remove(member):
 
 # Commands
 
-# Purge Command
+# Rules Command
 @bot.command()
 async def rules(ctx):
     embed = discord.Embed(title="‎ ")
@@ -79,6 +80,7 @@ async def rules(ctx):
     await ctx.send(embed=embed)
 
 
+# Purge Command
 @bot.command(pass_context=True)
 @commands.has_permissions(administrator=True)
 async def purge(ctx, limit: int):
