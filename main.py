@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix='.', intents=intents)
 # Ready Event
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name="hitting the whip and nae nae"))
+    await bot.change_presence(activity=discord.Streaming(name="Made by Plux2", url='https://discord.gg/jAV5pBW4tT'))
     print("|---------------------------------------|")
     print(f' Bot Online | {bot.user} ')
     print("|---------------------------------------|")
