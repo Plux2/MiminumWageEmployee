@@ -1,6 +1,8 @@
 import discord
+import random
 from discord.ext import commands
 from private.config import TOKEN
+from presencelist import list1
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -11,7 +13,6 @@ bot = commands.Bot(command_prefix='.', intents=intents)
 # Ready Event
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Streaming(name="Made by Plux2", url='https://discord.gg/jAV5pBW4tT'))
     print("|---------------------------------------|")
     print(f' Bot Online | {bot.user} ')
     print("|---------------------------------------|")
@@ -86,8 +87,18 @@ async def rules(ctx):
 @commands.has_permissions(administrator=True)
 async def purge(ctx, limit: int):
     print(f"Purge ({limit}) command executed successfully.")
-    await ctx.channel.purge(limit=limit)
+    await ctx.channel.purge(limit=limit+1)
     await ctx.message.delete()
+
+
+# Presence Command
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def presence(ctx):
+    status = random.choice(list1)
+    print(f"Status changed to {status}")
+    await ctx.send(f"Status changed to 'Playing **{status}**'")
+    await bot.change_presence(activity=discord.Game(f'{status}'))
 
 
 # Missing Perms Error
