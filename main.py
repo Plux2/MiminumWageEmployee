@@ -2,7 +2,6 @@ import discord
 import random
 from discord.ext import commands
 from private.config import TOKEN
-from presencelist import list1
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -101,6 +100,16 @@ async def presence(ctx):
     print(f"Status changed to {status}")
     await ctx.send(f"Status changed to 'Playing **{status}**'")
     await bot.change_presence(activity=discord.Game(f'{status}'))
+
+list1 = [
+    'video games with my friends',
+    'car soccer',
+    'alex simulator (being stupid simulator)',
+    'sully simulator (being awesome simulator)',
+    'the waffle iron',
+    'with hot wheel B)',
+    'wtf (what the fracktivist)',
+]
 
 
 # Missing Perms Error
