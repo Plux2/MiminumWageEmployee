@@ -47,6 +47,7 @@ async def on_member_remove(member):
 
 # Rules Command
 @bot.command()
+@commands.has_permissions(administrator=True)
 async def rules(ctx):
     embed = discord.Embed(title="‎ ")
     embed.set_author(name="SCS DISCORD SERVER RULES",
