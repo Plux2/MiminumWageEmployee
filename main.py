@@ -13,6 +13,8 @@ bot = commands.Bot(command_prefix='.', intents=intents)
 # Ready Event
 @bot.event
 async def on_ready():
+    status = random.choice(list1)
+    await bot.change_presence(activity=discord.Game(f'{status}'))
     print("|---------------------------------------|")
     print(f' Bot Online | {bot.user} ')
     print("|---------------------------------------|")
