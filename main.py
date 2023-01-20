@@ -2,6 +2,8 @@ import random
 
 import interactions
 
+import sqlite3
+
 from private.config import TOKEN
 
 bot = interactions.Client(token=TOKEN)
@@ -24,7 +26,7 @@ async def on_member_join(member):
         url="https://cdn.discordapp.com/attachments/1036662749830328360/1037867554489778186"
             "/Waffle_House_Esports_Logo_125x125.png")
     embed.set_footer(text="Made by Plux2")
-    await bot.get_channel(1036388767340179539).send(embed=embed)
+    await bot.get_channel(1036388767340179539).send(embeds=embed)
 
 
 # Leave Message
@@ -120,6 +122,34 @@ async def rules1(ctx: interactions.CommandContext):
     await ctx.send(embeds=embed)
 
 
+# WHE DISCORD RULES
+@bot.command(
+    name="wbsrules",
+    description="Warrens Boosting Server Rules",
+    scope=1064962819465945211
+)
+async def rules(ctx: interactions.CommandContext):
+    embed = interactions.Embed(title="‎ ")
+    embed.set_author(name="Warrens Boosting Server Rules")
+    embed.add_field(name="RULE 1:",
+                    value="N/A",
+                    inline=False)
+    embed.add_field(name="RULE 2:",
+                    value="N/A",
+                    inline=False)
+    embed.add_field(name="RULE 3:",
+                    value="N/A",
+                    inline=False)
+    embed.add_field(name="RULE 4:",
+                    value="N/A",
+                    inline=False)
+    embed.add_field(name="RULE 5:",
+                    value="N/A",
+                    inline=False)
+    embed.set_footer(text="Made by Plux2")
+    await ctx.send(embeds=embed)
+
+
 # Purge Command
 @bot.command(
     name='purge',
@@ -168,5 +198,6 @@ async def presence(ctx: interactions.CommandContext):
         )
     )
     await ctx.send(f'Status successfully changed to {status}', ephemeral=True)
+
 
 bot.start()
